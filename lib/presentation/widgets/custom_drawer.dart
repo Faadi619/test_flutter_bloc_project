@@ -107,8 +107,9 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       TextButton(
                         onPressed: () {
                           //TODO: Add navigation to dashboard
-                          // BlocProvider.of<SectionBloc>(context)
-                          //     .add(const SelectSection('Documents'));
+                          BlocProvider.of<SectionBloc>(context).add(
+                              const SelectSection(
+                                  ScreenEnum.gestionDesEnfants));
                         },
                         style: ButtonStyle(
                           shape: WidgetStateProperty.all(
@@ -122,7 +123,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                           child: Padding(
                             padding: EdgeInsets.only(left: 20),
                             child: Text(
-                              'Enfants 1',
+                              'Gestion des enfants',
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
